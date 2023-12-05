@@ -1,0 +1,186 @@
+@import "../../app.scss";
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+        border: 1px SOLID white;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+      button:hover{
+        color: black;
+        background-color: orange;
+        border: none;
+      }
+    }
+  }
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+    flex-wrap: wrap; 
+  
+    @include mobile {
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      grid-gap: 10px; 
+      padding: 10px; 
+    }
+  
+    .box {
+      padding: 50px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      @include mobile {
+        padding: 10px;
+        border: none;
+        align-items: center;
+        gap: 20px;
+      }
+
+      p {
+        @include mobile {
+          display: none;
+        }
+      }
+
+
+      button {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.588);
+        color: black;
+        border: NONE;
+        cursor: pointer;
+
+        @include mobile {
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
+      }
+
+      button:hover{
+        color: black;
+        background-color: orange;
+      }
+    }
+  }
+}
+
+.skill-img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  border-radius: 50%;
+  margin-left: 0.7rem;
+
+  @include mobile {
+    width: 80px; 
+    height: 80px;
+  }
+}
+
+.skill-name{
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  @include mobile{
+    margin-top: 1rem;
+    padding-left: 0.3rem;;
+  }
+}
